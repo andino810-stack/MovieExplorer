@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MovieApp</title>
+
+<link rel="stylesheet" href="estilos.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+padding-bottom:70px;
+}
+
+header{
+position:sticky;
+top:0;
+background:#181818;
+padding:15px;
+display:flex;
+align-items:center;
+gap:15px;
+z-index:100;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#ff3d00;
+}
+
+#buscar{
+flex:1;
+padding:12px;
+border:none;
+border-radius:25px;
+background:#2b2b2b;
+color:white;
+font-size:16px;
+outline:none;
+}
+
+.banner{
+height:230px;
+background:url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200") center/cover;
+display:flex;
+align-items:end;
+padding:20px;
+}
+
+.banner h1{
+font-size:35px;
+text-shadow:0 0 10px black;
+}
+
+section{
+padding:20px;
+}
+
+section h2{
+margin-bottom:15px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+gap:15px;
+}
+
+.card{
+background:#1f1f1f;
+border-radius:12px;
+overflow:hidden;
+cursor:pointer;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+padding:10px;
+font-size:16px;
+}
+
+.card p{
+padding:0 10px 10px;
+color:#ccc;
+font-size:14px;
+}
+
+/* Barra inferior */
+.nav-footer{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#181818;
+display:flex;
+justify-content:space-around;
+padding:12px;
+z-index:100;
+}
+
+.nav-footer a{
+color:white;
+text-decoration:none;
+font-size:22px;
+}
+
+/* Footer de derechos */
+.footer{
+text-align:center;
+padding:25px 15px;
+margin-top:40px;
+color:#aaa;
+font-size:14px;
+border-top:1px solid #333;
+background:#111;
+line-height:1.6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🎬 MovieApp</div>
+
+<input
+id="buscar"
+type="text"
+placeholder="Buscar películas..."
+>
+
+</header>
+
+<div class="banner">
+<h1>Bienvenido a MovieApp</h1>
+</div>
+
+<section>
+
+<h2>Tendencias</h2>
+
+<div class="grid" id="peliculas">
+</div>
+
+</section>
+
+<footer class="footer">
+© 2026 Todos los derechos reservados.
+<br>
+Desarrollado por Matías Andino.
+</footer>
+
+<footer class="nav-footer">
+<a href="#">🏠</a>
+<a href="#">🎬</a>
+<a href="#">📺</a>
+<a href="#">❤️</a>
+<a href="#">⚙️</a>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
